@@ -1,0 +1,295 @@
+:root{
+    --header-height:3rem;
+    --hue-color:190;
+    --first-color:hsl(var(--hue-color),64%,22%);
+    --first-color-second:hsl(var(--hue-color),64%,22%);
+    --first-color-alt:hsl(var(--hue-color),64%,15%);
+    --title-color:hsl(var(--hue-color),64%,18%);
+    --text-color:hsl(var(--hue-color),24%,35%);
+    --text-color-light:hsl(var(--hue-color),8%,60%);
+    --input-color:hsl(var(--hue-color),24%,97%);
+    --body-color:hsl(var(--hue-color),100%,99%);
+    --white-color:#fff;
+    --scroll-bar-color:hsl(var(--hue-color),12%,90%);
+    --scroll-thumb-color:hsl(var(--hue-color),12%,75%);
+
+    --body-font:'Open Sans',sans-serif;
+    --title-font:'Raleway',sans-serif;
+    --biggest-font-size:2.5rem;
+    --h1-font-size:2.5rem;
+    --h2-font-size:1.5rem;
+    --h3-font-size:1.25rem;
+    --normal-font-size:.938rem;
+    --small-font-size:.831rem;
+    --smaller-font-size:.75rem;
+
+    --font-medium:500;
+    --font-semi-bold:600;
+
+    --mb-0-25:.25rem;
+    --mb-0-5:.5rem;
+    --mb-0-75:.75rem;
+    --mb-1:1rem;
+    --mb-1-25:1.25rem;
+    --mb-1-5:1.5rem;
+    --mb-2:2rem;
+    --mb-2-5:2.5rem;
+
+    --z-tooltip:10;
+    --z-fixed:100;
+
+    --img-transition:.3s;
+    --img-hidden:hidden;
+    --img-scale:scale(1.1);
+}
+
+/*================================ Small Devices ===========================*/
+
+
+@media screen and (max-width:340px){
+    .place__container{
+        grid-template-columns: max-content;
+        justify-content: center;
+    }
+    .experience__content{
+        padding: 0;
+    }
+    .experience__overlay:nth-child(1){
+        width: 190px;
+    }
+    .experience__overlay:nth-child(2){
+        width: 80px;
+    }
+    .home__info{
+        width: 190px;
+        padding: 1rem;
+    }
+    .experience__img,
+    .video__container{
+        padding: 0;
+    }
+    .subscribe__container button{
+        padding: 1rem;
+    }
+}
+
+
+/*============================ Medium Devices =========================*/
+
+@media screen and (min-width: 568px) {
+    .video__container{
+        display: grid;
+        grid-template-columns: .7fr;
+        justify-content: center;
+    }
+    .place__container{
+        grid-template-columns: repeat(3,max-content);
+    }
+    .subscribe__form{
+        width: 470px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:766px) {
+    body{
+        margin: 0;
+    }
+    .nav{
+        height: calc(var(--header-height) + 1.5rem);
+    }
+    .nav__link{
+        color: var(--white-color);
+        text-transform: initial;
+    }
+    .nav__link:hover{
+        color: var(--white-color);
+    }
+    .nav__menu{
+        display: flex;
+        column-gap: 1rem;
+    }
+    .nav__list{
+        flex-direction: row;
+        column-gap: 4rem;
+    }
+    .nav__toggle,
+    .nav__close{
+        display: none;
+    }
+    .scroll-header .nav__link {
+        color: var(--text-color);
+    }
+    .section{
+        padding: 7rem 0 2rem;
+    }
+    .home__container{
+        height: 100vh;
+        grid-template-rows: 1.8fr .5fr;
+    }
+    .home__data{
+        align-self: flex-end;
+    }
+    .home__social{
+        flex-direction: row;
+        align-self: flex-end;
+        column-gap: 2.5rem;
+        margin-bottom: 3rem;
+    }
+    .home__info{
+        bottom: 3rem;
+    }
+    .about__container{
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+    }
+    .about__data, .about__title {
+        text-align: initial;
+    }
+    .about__title {
+        margin-bottom: var(--mb-1-5);
+    }
+    .about__description {
+        margin-bottom: var(--mb-2);
+    }
+    .discover__container {
+        width: 610px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .discover__container,
+    .place__container {
+        padding-top: 2rem;
+    }
+    .experience__overlay:nth-child(1) {
+        width: 363px;
+    }
+    .experience__overlay:nth-child(2) {
+        width: 160px;
+    }
+    .subscribe__bg {
+        background: none;
+        padding: 0;
+    }
+    .subscribe__container {
+        background-color: var(--first-color-second);
+        padding: 3.5rem 0;
+    }
+    .subscribe__input {
+        padding: 0 .5rem;
+    }
+}
+
+/*=========================== Larger Screen ==========================*/
+
+@media screen and (min-width:1024px) {
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .home__container {
+        grid-template-rows: 2fr .5fr;
+    }
+    .home__info {
+        width: 328px;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+    .home__info-title {
+        font-size: var(--normal-font-size);
+    }
+    .home__info-img {
+        width: 240px;
+    }
+    .about__img-one {
+        width: 230px;
+    }
+    .about__img-two {
+        width: 290px;
+    }
+    .discover__card {
+        width: 237px;
+    }
+    .discover__container {
+        width: 700px;
+    }
+    .discover__data {
+        left: 1.5rem;
+        bottom: 4.5rem;
+    }
+    .discover__title {
+        font-size: var(--h2-font-size);
+    }
+    .experience__content {
+        margin: var(--mb-1) 0;
+        column-gap: 3.5rem;
+    }
+    .experience__overlay:nth-child(1) {
+        width: 463px;
+        margin-right: 7rem;
+    }
+    .experience__overlay:nth-child(2) {
+        width: 220px;  
+        top: 3rem;
+    }
+    .video__description {
+        padding: 0 8rem;
+    }
+    .place__container {
+        gap: 3rem 2rem;
+    }
+    .place__card, .place__img {
+        height: 263px;
+    }
+    .footer__content {
+        justify-items: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+      max-width: 1024px;
+    }
+}
+
+@media screen and (min-width: 1265px) {
+    .container {
+      max-width: 1100px;
+    }
+}
+
+@media screen and (min-width: 1310px) {
+    .container {
+      max-width: 1150px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .container {
+      max-width: 1264px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .container {
+      max-width: 1320px;
+    }
+}
+
+@media screen and (min-width: 1590px) {
+    .container {
+      max-width: 1424px;
+    }
+}
+
+
+/*========================= Tall Screens ==========================*/
+
+@media screen and (min-height: 721px) {
+    body {
+      margin: 0;
+    }
+    .home__container, .home__img {
+      height: 640px;
+    }
+}
